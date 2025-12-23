@@ -1,0 +1,23 @@
+﻿Структура папок
+Серийный номер тома: 766B-659C
+C:.
+│   App.vue
+│   main.js
+│   structure.txt
+│   
+├───assets
+│       asd.mp4
+│       asd1.mp4
+│       asd2.mp4
+│       asd3.mp4
+│       base.css
+│       logo.svg
+│       main.css
+│       
+└───components
+    └───VideoCutout
+            CutoutText.vue
+            ScrollSpace.vue
+            VideoCutoutHero.vue
+            VideoCutoutPage.vue
+            
