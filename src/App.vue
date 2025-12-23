@@ -24,10 +24,11 @@
             </video>
             <div class="mask-overlay">
                 <h1 class="cutout-text"
-                    :class="{ 'justify-text': displayedText.includes('CRYPTO') && displayedText.includes('ALERTS') }"
-                    :data-text="displayedText">
+                    :class="{ 'justify-text': displayedText?.includes('CRYPTO') && displayedText?.includes('ALERTS') }"
+                    :data-text="displayedText || ''">
                     {{ displayedText }}
                 </h1>
+
             </div>
         </div>
         <div id="features" class="scroll-space" ref="section1">
