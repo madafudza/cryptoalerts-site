@@ -249,7 +249,7 @@
         </div>
 
         <div class="floating-text-wrapper">
-            <p class="floating-text">Still have questions?</p>
+            <p class="floating-text">Still got questions?</p>
         </div>
 
         <!-- SUPPORT SECTION -->
@@ -263,7 +263,7 @@
                 <div class="support-layout">
                     <div class="support-info">
                         <h3>Need help?</h3>
-                        <p>We're here 24/7. Seriously. Drop us a message and we'll get back to you ASAP.</p>
+                        <p>We're here. Drop us a message and we'll get back to you ASAP.</p>
 
                         <div class="contact-methods">
                             <div class="method">
@@ -272,7 +272,7 @@
                             </div>
                             <div class="method">
                                 <span class="method-label">Response time:</span>
-                                <span>Usually under 2 hours</span>
+                                <span>Usually under 2 hours in CET daytime</span>
                             </div>
                         </div>
                     </div>
@@ -329,7 +329,7 @@ export default {
             faqItems: [
                 {
                     question: "How do I get started?",
-                    answer: "Sign up, create your donation page, and you're good to go. Takes like 2 minutes. Connect your TRON wallet and start accepting donations immediately.",
+                    answer: "Sign up, create your donation page, and you're good to go. Takes like 2 minutes. Get your personal link, compllete simple moderation and start accepting donations immediately.",
                     open: false
                 },
                 {
@@ -343,13 +343,13 @@ export default {
                     open: false
                 },
                 {
-                    question: "Can I withdraw anytime?",
-                    answer: "Yep! Withdraw whenever you want. No minimums, no waiting periods. Your crypto, your rules.",
+                    question: "How is withdrawal process goes?",
+                    answer: "You can withdraw balance starting from 50 USDT. If you are willing to get lower commisions this limit may increace.",
                     open: false
                 },
                 {
                     question: "Is this safe?",
-                    answer: "100%. We use HD wallet architecture with unique child addresses for every transaction. Your private keys stay private. We never have access to your funds.",
+                    answer: "100%. We provide AML checks on our side, so you won't get troubles. Your private keys stay private. We never have access to your funds.",
                     open: false
                 },
                 {
@@ -364,7 +364,7 @@ export default {
                 },
                 {
                     question: "What if I have an issue?",
-                    answer: "Hit up our support team. We respond fast and actually help. No bots, no BS - just real people who know their stuff.",
+                    answer: "Hit up our support team. We respond ASAP and actually help. We have the bot in support but you can easily avoid it if you really need that support.",
                     open: false
                 }
             ],
@@ -623,7 +623,7 @@ html {
 
 .cutout-text {
     position: relative;
-    font-size: max(10vw, 15vh);
+    font-size: max(10vh, 11vw);
     line-height: 100%;
     font-weight: 900;
     font-family: "Arial Black", Arial, sans-serif;
@@ -631,6 +631,7 @@ html {
     margin: 0;
     text-align: center;
     text-transform: uppercase;
+    pointer-events: none;
     white-space: pre-line;
 }
 
@@ -713,7 +714,7 @@ html {
     color: rgba(0, 0, 0, .9);
     text-decoration: none;
     font-family: "SF Pro Display", sans-serif;
-    font-size: min(1.9vw, .875rem);
+    font-size: min(4vw, .875rem);
     font-weight: 600;
     transition: color .3s ease;
 }
@@ -1158,37 +1159,6 @@ html {
     font-size: 1.05rem;
 }
 
-/* Floating Text */
-.floating-text-wrapper {
-    position: relative;
-    height: 0;
-    width: 50%;
-    z-index: 15;
-    pointer-events: none;
-    top: 50%;
-}
-
-.floating-text {
-    position: sticky;
-    margin: 0;
-    padding: 1rem 2rem;
-    font-family: "SF Pro Display", sans-serif;
-    font-size: clamp(0.875rem, 2vw, 1.2rem);
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    color: rgba(0, 0, 0, 0.85);
-    pointer-events: auto;
-    width: fit-content;
-}
-
-.floating-text-wrapper:nth-child(odd) .floating-text {
-    left: 2rem;
-}
-
-.floating-text-wrapper:nth-child(even) .floating-text {
-    left: auto;
-    right: 2rem;
-}
 
 /* Hamburger Button */
 .hamburger-button {
@@ -1346,6 +1316,60 @@ html {
     margin: 0;
 }
 
+/* Floating Text - Giant Watermark Style (Centered) */
+.floating-text-wrapper {
+    position: relative;
+    height: 0;
+    z-index: 15;
+    pointer-events: none;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.floating-text {
+    position: sticky;
+    top: 50%;
+    /* transform: translateY(-10%); */
+    margin: 0 auto;
+    padding: 0;
+
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: clamp(3rem, 12vw, 8rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+
+    color: rgba(0, 0, 0, 0.08);
+    text-transform: uppercase;
+
+    pointer-events: none;
+    width: fit-content;
+    text-align: center;
+
+    transition: all 0.6s ease;
+}
+
+/* Убрал смещения для left/right - теперь все строго по центру */
+.floating-text-wrapper:nth-child(odd) .floating-text,
+.floating-text-wrapper:nth-child(even) .floating-text {
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .floating-text {
+        font-size: clamp(2rem, 15vw, 5rem);
+    }
+
+    .floating-text-wrapper:nth-child(odd) .floating-text {
+        padding-left: 5%;
+    }
+
+    .floating-text-wrapper:nth-child(even) .floating-text {
+        padding-right: 5%;
+    }
+}
 
 
 
@@ -1362,6 +1386,11 @@ html {
     .big-seven {
         font-size: 10rem;
     }
+
+    .big-seven img {
+        width: 30vw;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -1396,36 +1425,20 @@ html {
         padding: 4rem 1.5rem;
     }
 
-    .floating-text {
-        font-size: clamp(0.75rem, 3vw, 1rem);
-        padding: 0.75rem 1.5rem;
+    .big-seven img {
+        width: 50vw;
     }
 
-    .floating-text-wrapper:nth-child(odd) .floating-text {
-        left: 1rem;
-    }
-
-    .floating-text-wrapper:nth-child(even) .floating-text {
-        right: 1rem;
-    }
 }
 
-@media (max-width: 480px) {
-    .floating-text {
-        font-size: 0.7rem;
-        padding: 0.6rem 1rem;
-    }
-
-    .floating-text-wrapper:nth-child(odd) .floating-text {
-        left: 0.5rem;
-    }
-
-    .floating-text-wrapper:nth-child(even) .floating-text {
-        right: 0.5rem;
-    }
+@media (max-width: 490px) {
 
     .big-seven {
         font-size: 8rem;
+    }
+
+    .cutout-text {
+        font-size: 16vw;
     }
 }
 
