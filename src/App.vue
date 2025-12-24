@@ -64,6 +64,7 @@
             <video ref="bgVideo" autoplay muted playsinline loop disablepictureinpicture disableremoteplayback
                 controlslist="nofullscreen noremoteplayback nodownload noplaybackrate" class="bg-video">
                 <source src="./assets/asd3.mp4" type="video/mp4" />
+                <!-- <source src="./assets/asd3.webm" type="video/webm" /> -->
             </video>
             <div class="mask-overlay">
                 <h1 class="cutout-text"
@@ -273,13 +274,6 @@ html {
     scroll-behavior: smooth;
 }
 
-html,
-body {
-    background-color: #0a0a0a;
-    /* Тот же цвет что у footer */
-    margin: 0;
-    padding: 0;
-}
 
 
 .page-wrapper {
