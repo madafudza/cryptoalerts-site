@@ -282,10 +282,13 @@ html {
     inset: 0;
     width: 100%;
     height: 100vh;
+    height: 100svh;
     z-index: 1;
     overflow: hidden;
     background-color: #000;
 }
+
+
 
 .bg-video {
     position: absolute;
@@ -331,7 +334,9 @@ html {
     position: relative;
     z-index: 10;
     height: 100vh;
+    height: 100svh;
     margin-top: 100vh;
+    margin-top: 100svh;
     padding: 4rem 2rem;
     background: #1b1b1b;
     display: flex;
