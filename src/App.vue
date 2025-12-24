@@ -320,7 +320,7 @@ html {
     font-size: max(10vw, 15vh);
     line-height: 100%;
     font-weight: 900;
-    font-family: sans-serif;
+    font-family: "Arial Black", Arial, sans-serif;
     color: #000;
     margin: 0;
     text-align: center;
@@ -349,6 +349,9 @@ html {
 
 .content-placeholder {
     text-align: center;
+    font-family: "SF Pro Display", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08rem;
     z-index: 20;
     color: #fff;
     max-width: 800px;
