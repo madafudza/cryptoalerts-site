@@ -101,7 +101,7 @@
         <div id="support" class="scroll-space" ref="section5">
             <div class="content-placeholder">
                 <h2>Поддержка</h2>
-                <p>Круглосуточная поддержка пользователей...</p>
+                <p>1Круглосуточная поддержка пользователей...</p>
             </div>
         </div>
         <div class="scroll-space empty-space" ref="section6">
@@ -272,6 +272,15 @@ export default {
 html {
     scroll-behavior: smooth;
 }
+
+html,
+body {
+    background-color: #0a0a0a;
+    /* Тот же цвет что у footer */
+    margin: 0;
+    padding: 0;
+}
+
 
 .page-wrapper {
     min-height: 600vh;
