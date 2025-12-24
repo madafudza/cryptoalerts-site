@@ -102,7 +102,7 @@
         <div id="support" class="scroll-space" ref="section5">
             <div class="content-placeholder">
                 <h2>Поддержка</h2>
-                <p>2Круглосуточная поддержка пользователей...</p>
+                <p>Круглосуточная поддержка пользователей...</p>
             </div>
         </div>
         <div class="scroll-space empty-space" ref="section6">
