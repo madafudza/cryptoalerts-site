@@ -1,21 +1,31 @@
 <template>
     <div class="page-wrapper">
-        <!-- Navigation остается без изменений -->
+        <!-- Navigation -->
         <nav class="nav-header">
             <div class="nav-container">
-                <div class="nav-logo">
+                <div class="nav-logo load-anim" style="--anim-order: 1">
                     <a href="#" class="logo-link">CryptoAlerts</a>
                 </div>
 
                 <ul class="nav-list desktop-nav">
-                    <li class="nav-item"><a href="#features" @click="smoothScroll">Features</a></li>
-                    <li class="nav-item"><a href="#fees" @click="smoothScroll">Fees</a></li>
-                    <li class="nav-item"><a href="#partnership" @click="smoothScroll">Partnership</a></li>
-                    <li class="nav-item"><a href="#faq" @click="smoothScroll">FAQ</a></li>
-                    <li class="nav-item"><a href="#support" @click="smoothScroll">Support</a></li>
+                    <li class="nav-item load-anim" style="--anim-order: 2">
+                        <a href="#features" @click="smoothScroll">Features</a>
+                    </li>
+                    <li class="nav-item load-anim" style="--anim-order: 3">
+                        <a href="#fees" @click="smoothScroll">Fees</a>
+                    </li>
+                    <li class="nav-item load-anim" style="--anim-order: 4">
+                        <a href="#partnership" @click="smoothScroll">Partnership</a>
+                    </li>
+                    <li class="nav-item load-anim" style="--anim-order: 5">
+                        <a href="#faq" @click="smoothScroll">FAQ</a>
+                    </li>
+                    <li class="nav-item load-anim" style="--anim-order: 6">
+                        <a href="#support" @click="smoothScroll">Support</a>
+                    </li>
                 </ul>
 
-                <div class="nav-auth desktop-nav">
+                <div class="nav-auth desktop-nav load-anim" style="--anim-order: 7">
                     <a href="#login" class="auth-link">Login / Sign up</a>
                 </div>
 
@@ -59,7 +69,7 @@
         </transition>
 
         <!-- Video Background -->
-        <div class="video-cutout-container">
+        <div class="video-cutout-container load-anim" style="--anim-order: 8">
             <video ref="bgVideo" autoplay muted playsinline loop disablepictureinpicture class="bg-video">
                 <source src="./assets/asd3.mp4" type="video/mp4" />
             </video>
@@ -75,12 +85,12 @@
         <!-- FEATURES SECTION -->
         <div id="features" class="scroll-space" ref="section1">
             <div class="content-section features-content">
-                <div class="section-header">
+                <div class="section-header scroll-reveal">
                     <span class="section-number">01</span>
                     <h2>What we do</h2>
                 </div>
 
-                <p class="section-description">
+                <p class="section-description scroll-reveal">
                     CryptoAlerts is a platform for accepting donations in cryptocurrency.
                     It provides streamers and content creators with instant USDT donations
                     on TRON network, real-time alerts, custom donation pages, and secure
@@ -89,36 +99,36 @@
                 </p>
 
                 <div class="feature-grid">
-                    <div class="feature-item">
+                    <div class="feature-item scroll-reveal" style="--reveal-delay: 0s">
                         <h3>Instant Crypto Donations</h3>
                         <p>Accept USDT directly on TRON network. No middlemen, no BS. Just straight crypto from your fans to
                             your wallet.</p>
                     </div>
 
-                    <div class="feature-item highlight">
+                    <div class="feature-item highlight scroll-reveal" style="--reveal-delay: 0.1s">
                         <h3>Real-time Alerts</h3>
                         <p>Get notified instantly when someone drops you crypto. Perfect for streamers who want that live
                             engagement with their community.</p>
                     </div>
 
-                    <div class="feature-item">
+                    <div class="feature-item scroll-reveal" style="--reveal-delay: 0.2s">
                         <h3>Custom Donation Pages</h3>
                         <p>Your link, your style. Create a personalized donation page that actually looks good and works
                             seamlessly.</p>
                     </div>
 
-                    <div class="feature-item">
+                    <div class="feature-item scroll-reveal" style="--reveal-delay: 0.3s">
                         <h3>OBS Integration</h3>
                         <p>Plug into your stream with our widget. Show off those donations in real-time. Your viewers will
                             love it.</p>
                     </div>
 
-                    <div class="feature-item highlight">
+                    <div class="feature-item highlight scroll-reveal" style="--reveal-delay: 0.4s">
                         <h3>Secure & Private</h3>
                         <p>We use HD wallets with child addresses for every transaction. Your funds stay yours, always.</p>
                     </div>
 
-                    <div class="feature-item">
+                    <div class="feature-item scroll-reveal" style="--reveal-delay: 0.5s">
                         <h3>Dashboard That Makes Sense</h3>
                         <p>Track your earnings, manage withdrawals, check history. Everything in one place without the
                             clutter.</p>
@@ -134,23 +144,23 @@
         <!-- FEES SECTION -->
         <div id="fees" class="scroll-space" ref="section2">
             <div class="content-section fees-content">
-                <div class="section-header">
+                <div class="section-header scroll-reveal">
                     <span class="section-number">02</span>
                     <h2>Pricing</h2>
                 </div>
 
                 <div class="fees-layout">
-                    <div class="fee-visual">
-                        <!-- <div class="big-seven">7<span class="percent">%</span></div> -->
-                        <div class="big-seven"><img src="./assets/7.png" alt="7%"></div>
+                    <div class="fee-visual scroll-reveal">
+                        <div class="big-seven rotate-on-scroll"><img src="./assets/7.png" alt="7%"></div>
                     </div>
 
                     <div class="fee-details">
-                        <h3>That's it. Just 7%.</h3>
-                        <p>No hidden fees, no monthly subscriptions, no surprise charges. We take 7% from each donation, and
+                        <h3 class="scroll-reveal">That's it. Just 7%.</h3>
+                        <p class="scroll-reveal">No hidden fees, no monthly subscriptions, no surprise charges. We take 7%
+                            from each donation, and
                             that's literally it.</p>
 
-                        <div class="fee-breakdown">
+                        <div class="fee-breakdown scroll-reveal">
                             <div class="breakdown-item">
                                 <span class="label">Platform fee:</span>
                                 <span class="value">7%</span>
@@ -169,7 +179,8 @@
                             </div>
                         </div>
 
-                        <p class="fee-note">TRON network fees (gas) are covered by us for incoming transactions. Withdrawals
+                        <p class="fee-note scroll-reveal">TRON network fees (gas) are covered by us for incoming
+                            transactions. Withdrawals
                             use standard TRON network fees, which are super cheap anyway.</p>
                     </div>
                 </div>
@@ -183,13 +194,13 @@
         <!-- PARTNERSHIP SECTION -->
         <div id="partnership" class="scroll-space" ref="section3">
             <div class="content-section partnership-content">
-                <div class="section-header">
+                <div class="section-header scroll-reveal">
                     <span class="section-number">03</span>
                     <h2>Wanna Partner Up?</h2>
                 </div>
 
                 <div class="partnership-layout">
-                    <div class="partnership-info">
+                    <div class="partnership-info scroll-reveal">
                         <h3>We're looking for creators</h3>
                         <p>If you're a streamer, content creator, or running a community, let's talk. We offer custom
                             integrations, better rates, and dedicated support for partners.</p>
@@ -202,7 +213,7 @@
                         </ul>
                     </div>
 
-                    <form class="contact-form" @submit.prevent="submitPartnershipForm">
+                    <form class="contact-form scroll-reveal" @submit.prevent="submitPartnershipForm">
                         <input type="text" v-model="partnershipForm.name" placeholder="Your name" required />
                         <input type="email" v-model="partnershipForm.email" placeholder="Email address" required />
                         <input type="text" v-model="partnershipForm.platform"
@@ -226,13 +237,14 @@
         <!-- FAQ SECTION -->
         <div id="faq" class="scroll-space" ref="section4">
             <div class="content-section faq-content">
-                <div class="section-header">
+                <div class="section-header scroll-reveal">
                     <span class="section-number">04</span>
                     <h2>FAQ</h2>
                 </div>
 
                 <div class="faq-list">
-                    <div v-for="(item, index) in faqItems" :key="index" class="faq-item" :class="{ 'active': item.open }"
+                    <div v-for="(item, index) in faqItems" :key="index" class="faq-item scroll-reveal"
+                        :style="{ '--reveal-delay': index * 0.08 + 's' }" :class="{ 'active': item.open }"
                         @click="toggleFaq(index)">
                         <div class="faq-question">
                             <h3>{{ item.question }}</h3>
@@ -255,13 +267,13 @@
         <!-- SUPPORT SECTION -->
         <div id="support" class="scroll-space" ref="section5">
             <div class="content-section support-content">
-                <div class="section-header">
+                <div class="section-header scroll-reveal">
                     <span class="section-number">05</span>
                     <h2>Get in Touch</h2>
                 </div>
 
                 <div class="support-layout">
-                    <div class="support-info">
+                    <div class="support-info scroll-reveal">
                         <h3>Need help?</h3>
                         <p>We're here. Drop us a message and we'll get back to you ASAP.</p>
 
@@ -277,7 +289,7 @@
                         </div>
                     </div>
 
-                    <form class="contact-form" @submit.prevent="submitSupportForm">
+                    <form class="contact-form scroll-reveal" @submit.prevent="submitSupportForm">
                         <input type="text" v-model="supportForm.name" placeholder="Your name" required />
                         <input type="email" v-model="supportForm.email" placeholder="Email address" required />
                         <input type="text" v-model="supportForm.subject" placeholder="Subject" required />
@@ -314,8 +326,6 @@ export default {
                 "but may be better...",
                 "what's next?",
                 "feel free to ask",
-                // "what do you think, chat?",
-                // "what do you think, chat?",
                 "r we starting or sum?",
                 "r we starting or sum?",
             ],
@@ -324,8 +334,6 @@ export default {
             onResizeBound: null,
             isMobileMenuOpen: false,
             windowWidth: window.innerWidth,
-
-            // FAQ Data
             faqItems: [
                 {
                     question: "How do I get started?",
@@ -368,8 +376,6 @@ export default {
                     open: false
                 }
             ],
-
-            // Partnership Form
             partnershipForm: {
                 name: '',
                 email: '',
@@ -379,8 +385,6 @@ export default {
                 success: false,
                 error: ''
             },
-
-            // Support Form
             supportForm: {
                 name: '',
                 email: '',
@@ -411,6 +415,7 @@ export default {
             this.ticking = true;
             window.requestAnimationFrame(() => {
                 this.updateDisplayedText();
+                this.handleScrollReveal();
                 this.ticking = false;
             });
         };
@@ -426,6 +431,7 @@ export default {
         window.addEventListener("scroll", this.onScrollBound, { passive: true });
         window.addEventListener("resize", this.onResizeBound);
         this.updateDisplayedText();
+        this.handleScrollReveal();
 
         const v = this.$refs.bgVideo;
         if (v) {
@@ -456,7 +462,7 @@ export default {
                 this.$refs.section6,
             ];
 
-            const centerLine = window.innerHeight * 0.3;
+            const centerLine = window.innerHeight * 0.25;
             let newTextIndex = 0;
 
             for (let i = 0; i < sections.length; i++) {
@@ -479,6 +485,19 @@ export default {
             if (nextText !== this.displayedText) {
                 this.displayedText = nextText;
             }
+        },
+
+        handleScrollReveal() {
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+
+            revealElements.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                if (rect.top < windowHeight * 0.85) {
+                    el.classList.add('revealed');
+                }
+            });
         },
 
         toggleMobileMenu() {
@@ -521,13 +540,6 @@ export default {
             this.partnershipForm.success = false;
 
             try {
-                // Здесь будет твой API эндпоинт
-                // const response = await fetch('/api/partnership', {
-                //     method: 'POST',
-                //     body: JSON.stringify(this.partnershipForm)
-                // });
-
-                // Симуляция отправки
                 await new Promise(resolve => setTimeout(resolve, 1500));
 
                 this.partnershipForm.success = true;
@@ -548,13 +560,6 @@ export default {
             this.supportForm.success = false;
 
             try {
-                // Здесь будет твой API эндпоинт
-                // const response = await fetch('/api/support', {
-                //     method: 'POST',
-                //     body: JSON.stringify(this.supportForm)
-                // });
-
-                // Симуляция отправки
                 await new Promise(resolve => setTimeout(resolve, 1500));
 
                 this.supportForm.success = true;
@@ -587,7 +592,67 @@ html {
     min-height: 600vh;
 }
 
-/* Video Background */
+/* ========================
+   PAGE LOAD ANIMATIONS (Anime.js style)
+   ======================== */
+
+/* Initial load animation for navigation and hero */
+.load-anim {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideInDown 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: calc(var(--anim-order) * 0.08s);
+}
+
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll reveal с stagger эффектом */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: var(--reveal-delay, 0s);
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Rotation анимация для цифры 7 */
+.rotate-on-scroll {
+    animation: gentleRotate linear;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+}
+
+@keyframes gentleRotate {
+    from {
+        transform: rotate(-15deg) scale(0.8);
+        opacity: 0.3;
+    }
+
+    to {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+/* ========================
+   VIDEO & HERO SECTION
+   ======================== */
+
 .video-cutout-container {
     position: fixed;
     inset: 0;
@@ -603,11 +668,12 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(.6);
+    transform: translate(-50%, -50%) scale(1);
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
     z-index: 1;
+    /* filter: brightness(0.9) contrast(1.2); */
 }
 
 .mask-overlay {
@@ -633,6 +699,7 @@ html {
     text-transform: uppercase;
     pointer-events: none;
     white-space: pre-line;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cutout-text.justify-text {
@@ -651,7 +718,10 @@ html {
     opacity: 1;
 }
 
-/* Navigation Styles */
+/* ========================
+   NAVIGATION
+   ======================== */
+
 .nav-header {
     position: fixed;
     top: 0;
@@ -698,11 +768,30 @@ html {
     text-decoration: none;
     font-family: "SF Pro Display", sans-serif;
     font-size: min(1.9vw, .875rem);
-    transition: color .3s ease;
+    transition: all .3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ff6a00;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .nav-item a:hover {
     color: #ff6a00;
+    transform: translateY(-2px);
+}
+
+.nav-item a:hover::after {
+    width: 100%;
 }
 
 .nav-logo {
@@ -716,7 +805,12 @@ html {
     font-family: "SF Pro Display", sans-serif;
     font-size: min(4vw, .875rem);
     font-weight: 600;
-    transition: color .3s ease;
+    transition: all .3s ease;
+}
+
+.logo-link:hover {
+    color: #ff6a00;
+    transform: scale(1.05);
 }
 
 .nav-auth {
@@ -731,14 +825,35 @@ html {
     font-size: min(1.9vw, .875rem);
     font-weight: 700;
     white-space: nowrap;
-    transition: color .3s ease;
+    transition: all .3s ease;
+    position: relative;
+    /* padding: 8px 16px; */
+    border-radius: 6px;
+}
+
+.auth-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #ff6a00 0%, #ff8c42 100%);
+    opacity: 0;
+    border-radius: 6px;
+    transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
 .auth-link:hover {
     color: #ff6a00;
 }
 
-/* Scroll Spaces */
+/* .auth-link:hover::before {
+    opacity: 1;
+} */
+
+/* ========================
+   SCROLL SECTIONS
+   ======================== */
+
 .scroll-space {
     position: relative;
     z-index: 10;
@@ -753,7 +868,6 @@ html {
     justify-content: center;
 }
 
-/* Content Section Styling */
 .content-section {
     max-width: 1200px;
     width: 100%;
@@ -799,8 +913,10 @@ html {
     }
 }
 
+/* ========================
+   FEATURES
+   ======================== */
 
-/* FEATURES Section */
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -812,13 +928,14 @@ html {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature-item:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 106, 0, 0.3);
-    transform: translateY(-4px);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(255, 106, 0, 0.15);
 }
 
 .feature-item.highlight {
@@ -826,11 +943,21 @@ html {
     background: rgba(255, 106, 0, 0.05);
 }
 
+.feature-item.highlight:hover {
+    border-color: rgba(255, 106, 0, 0.6);
+    box-shadow: 0 20px 40px rgba(255, 106, 0, 0.25);
+}
+
 .feature-item h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin: 0 0 1rem 0;
     color: #fff;
+    transition: color 0.3s ease;
+}
+
+.feature-item:hover h3 {
+    color: #ff6a00;
 }
 
 .feature-item p {
@@ -840,7 +967,10 @@ html {
     margin: 0;
 }
 
-/* FEES Section */
+/* ========================
+   FEES
+   ======================== */
+
 .fees-layout {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -864,6 +994,12 @@ html {
 
 .big-seven img {
     width: 25vw;
+    filter: drop-shadow(0 0 30px rgba(255, 106, 0, 0.3));
+    transition: filter 0.3s ease;
+}
+
+.fee-visual:hover .big-seven img {
+    filter: drop-shadow(0 0 50px rgba(255, 106, 0, 0.5));
 }
 
 .percent {
@@ -890,6 +1026,12 @@ html {
     border-radius: 12px;
     padding: 2rem;
     margin: 2rem 0;
+    transition: all 0.3s ease;
+}
+
+.fee-breakdown:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 106, 0, 0.2);
 }
 
 .breakdown-item {
@@ -898,6 +1040,11 @@ html {
     align-items: center;
     padding: 0.75rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.breakdown-item:hover {
+    padding-left: 10px;
 }
 
 .breakdown-item:last-child {
@@ -913,6 +1060,11 @@ html {
     color: #fff;
     font-weight: 600;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.breakdown-item:hover .value {
+    color: #ff6a00;
 }
 
 .fee-note {
@@ -922,7 +1074,10 @@ html {
     margin: 1.5rem 0 0 0;
 }
 
-/* PARTNERSHIP Section */
+/* ========================
+   PARTNERSHIP
+   ======================== */
+
 .partnership-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -953,6 +1108,12 @@ html {
     position: relative;
     color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.partnership-perks li:hover {
+    color: #fff;
+    padding-left: 2rem;
 }
 
 .partnership-perks li::before {
@@ -961,9 +1122,17 @@ html {
     left: 0;
     color: #ff6a00;
     font-weight: 600;
+    transition: transform 0.3s ease;
 }
 
-/* Contact Forms */
+.partnership-perks li:hover::before {
+    transform: translateX(5px);
+}
+
+/* ========================
+   FORMS
+   ======================== */
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -988,6 +1157,8 @@ html {
     outline: none;
     border-color: #ff6a00;
     background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.15);
 }
 
 .contact-form input::placeholder,
@@ -1013,11 +1184,31 @@ html {
     letter-spacing: 0.05em;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.submit-btn:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.4);
 }
 
 .submit-btn:active {
@@ -1036,7 +1227,10 @@ html {
     margin: 0;
 }
 
-/* FAQ Section */
+/* ========================
+   FAQ
+   ======================== */
+
 .faq-list {
     max-width: 900px;
 }
@@ -1045,6 +1239,11 @@ html {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.02);
+    padding-left: 1rem;
 }
 
 .faq-item:last-child {
@@ -1076,11 +1275,12 @@ html {
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.5);
     font-weight: 300;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .faq-item.active .faq-icon {
     color: #ff6a00;
+    transform: rotate(180deg);
 }
 
 .faq-answer {
@@ -1105,7 +1305,10 @@ html {
     transform: translateY(-10px);
 }
 
-/* SUPPORT Section */
+/* ========================
+   SUPPORT
+   ======================== */
+
 .support-layout {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -1134,6 +1337,11 @@ html {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    transition: transform 0.3s ease;
+}
+
+.method:hover {
+    transform: translateX(5px);
 }
 
 .method-label {
@@ -1147,11 +1355,28 @@ html {
     color: #ff6a00;
     text-decoration: none;
     font-size: 1.1rem;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.method a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff6a00;
+    transition: width 0.3s ease;
+}
+
+.method a:hover::after {
+    width: 100%;
 }
 
 .method a:hover {
-    opacity: 0.8;
+    opacity: 1;
+    letter-spacing: 0.5px;
 }
 
 .method span:not(.method-label) {
@@ -1159,8 +1384,10 @@ html {
     font-size: 1.05rem;
 }
 
+/* ========================
+   MOBILE MENU
+   ======================== */
 
-/* Hamburger Button */
 .hamburger-button {
     display: none;
     flex-direction: column;
@@ -1198,7 +1425,6 @@ html {
     transform: rotate(-45deg);
 }
 
-/* Mobile Menu */
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
@@ -1289,7 +1515,10 @@ html {
     transform: translateX(100%);
 }
 
-/* Footer */
+/* ========================
+   FOOTER
+   ======================== */
+
 .empty-space {
     background: transparent;
     margin-top: 0;
@@ -1316,7 +1545,10 @@ html {
     margin: 0;
 }
 
-/* Floating Text - Giant Watermark Style (Centered) */
+/* ========================
+   FLOATING TEXT
+   ======================== */
+
 .floating-text-wrapper {
     position: relative;
     height: 0;
@@ -1331,7 +1563,6 @@ html {
 .floating-text {
     position: sticky;
     top: 50%;
-    /* transform: translateY(-10%); */
     margin: 0 auto;
     padding: 0;
 
@@ -1351,11 +1582,14 @@ html {
     transition: all 0.6s ease;
 }
 
-/* Убрал смещения для left/right - теперь все строго по центру */
 .floating-text-wrapper:nth-child(odd) .floating-text,
 .floating-text-wrapper:nth-child(even) .floating-text {
     margin: 0 auto;
 }
+
+/* ========================
+   RESPONSIVE
+   ======================== */
 
 @media (max-width: 768px) {
     .floating-text {
@@ -1371,9 +1605,6 @@ html {
     }
 }
 
-
-
-/* Mobile & Tablet Responsive */
 @media (max-width: 1024px) {
 
     .fees-layout,
@@ -1386,11 +1617,6 @@ html {
     .big-seven {
         font-size: 10rem;
     }
-
-    .big-seven img {
-        width: 30vw;
-    }
-
 }
 
 @media (max-width: 768px) {
@@ -1424,15 +1650,9 @@ html {
     .scroll-space {
         padding: 4rem 1.5rem;
     }
-
-    .big-seven img {
-        width: 50vw;
-    }
-
 }
 
 @media (max-width: 490px) {
-
     .big-seven {
         font-size: 8rem;
     }
@@ -1449,6 +1669,13 @@ html {
 
     .desktop-nav {
         display: flex !important;
+    }
+}
+
+/* Поддержка старых браузеров */
+@supports not (animation-timeline: view()) {
+    .rotate-on-scroll {
+        animation: none;
     }
 }
 </style>
